@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XIENITY — Generation 24</title>
+  <meta name="description" content="XIENITY Generation 24 — Premium Class Website" />
+
+  <!-- Favicon (inline SVG as data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%233d1a6e'/%3E%3Cstop offset='100%25' stop-color='%238b5cc8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-size='28' fill='white' font-weight='300'%3EX%3C/text%3E%3C/svg%3E" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     LOADING SCREEN
+══════════════════════════════════════════ -->
+<div id="loader" role="status" aria-label="Loading">
+  <!-- Logo -->
+  <svg class="loader-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3d1a6e"/>
+        <stop offset="100%" stop-color="#8b5cc8"/>
+      </linearGradient>
+    </defs>
+    <rect width="64" height="64" rx="14" fill="url(#logoGrad)"/>
+    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+          font-family="Georgia, serif" font-size="30" fill="white" font-weight="300">X</text>
+  </svg>
+  <p class="loader-text">Welcome to XIENITY</p>
+  <p class="loader-sub">Generation 24</p>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <!-- Logo -->
+  <a href="#hero" class="nav-logo" aria-label="XIENITY Home">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="navLogoGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#3d1a6e"/>
+          <stop offset="100%" stop-color="#8b5cc8"/>
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="14" fill="url(#navLogoGrad)"/>
+      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+            font-family="Georgia, serif" font-size="30" fill="white" font-weight="300">X</text>
+    </svg>
+    XIENITY
+  </a>
+
+  <!-- Desktop Menu -->
+  <ul class="nav-menu" role="menubar">
+    <li role="none"><a href="#hero"      class="nav-link" role="menuitem">Home</a></li>
+    <li role="none"><a href="#informasi" class="nav-link" role="menuitem">Informasi</a></li>
+    <li role="none"><a href="#jadwal"    class="nav-link" role="menuitem">Jadwal</a></li>
+    <li role="none"><a href="#piket"     class="nav-link" role="menuitem">Piket</a></li>
+    <li role="none"><a href="#kas"       class="nav-link" role="menuitem">Kas</a></li>
+    <li role="none"><a href="#galeri"    class="nav-link" role="menuitem">Galeri</a></li>
+    <li role="none"><a href="#member"    class="nav-link" role="menuitem">Member</a></li>
+    <li role="none"><a href="#guru"      class="nav-link" role="menuitem">Guru</a></li>
+  </ul>
+
+  <!-- Actions -->
+  <div class="nav-actions">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"></button>
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div id="sidebar-overlay" aria-hidden="true"></div>
+<aside id="sidebar" aria-label="Mobile navigation">
+  <a href="#hero"      class="sidebar-link">Home</a>
+  <a href="#informasi" class="sidebar-link">Informasi</a>
+  <a href="#jadwal"    class="sidebar-link">Jadwal</a>
+  <a href="#piket"     class="sidebar-link">Piket</a>
+  <a href="#kas"       class="sidebar-link">Kas</a>
+  <a href="#galeri"    class="sidebar-link">Galeri</a>
+  <a href="#member"    class="sidebar-link">Member</a>
+  <a href="#guru"      class="sidebar-link">Guru</a>
+</aside>
+
+
+<!-- ══════════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Ambient Orbs -->
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Class of 2024 &nbsp;·&nbsp; SMA Negeri</p>
+    <h1 class="hero-title">XIENITY</h1>
+    <p class="hero-gen">Generation 24</p>
+    <p class="hero-sub">Welcome to Xienity Class</p>
+
+    <!-- Realtime Clock -->
+    <div class="hero-clock">
+      <div id="clock-time">00:00:00</div>
+      <div class="hero-clock-date" id="clock-date">Memuat tanggal...</div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="hero-buttons">
+      <a href="#jadwal" class="btn btn-primary">
+        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+        Lihat Jadwal
+      </a>
+      <a href="#galeri" class="btn btn-ghost">
+        <i class="fa-regular fa-images" aria-hidden="true"></i>
+        Galeri Kelas
+      </a>
+      <a href="https://open.spotify.com" target="_blank" rel="noopener" class="btn btn-spotify">
+        <i class="fa-brands fa-spotify" aria-hidden="true"></i>
+        Spotify Playlist
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     INFORMASI KELAS
+══════════════════════════════════════════ -->
+<section id="informasi" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Tentang Kelas</p>
+    <h2 class="section-title">Informasi Kelas</h2>
+    <p class="section-desc">Kepengurusan dan penanggung jawab kelas XIENITY Generation 24.</p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card glass-card reveal">
+      <div class="info-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+      <p class="info-role">Wali Kelas</p>
+      <p class="info-name">Muh. ——</p>
+    </div>
+    <div class="info-card glass-card reveal">
+      <div class="info-icon"><i class="fa-solid fa-star"></i></div>
+      <p class="info-role">Ketua Kelas</p>
+      <p class="info-name">Raffi Ahmad</p>
+    </div>
+    <div class="info-card glass-card reveal">
+      <div class="info-icon"><i class="fa-solid fa-pen-nib"></i></div>
+      <p class="info-role">Sekretaris</p>
+      <p class="info-name">Eka</p>
+    </div>
+    <div class="info-card glass-card reveal">
+      <div class="info-icon"><i class="fa-solid fa-wallet"></i></div>
+      <p class="info-role">Bendahara</p>
+      <p class="info-name">Ivana</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     JADWAL PELAJARAN
+══════════════════════════════════════════ -->
+<section id="jadwal" class="section" style="background: var(--clr-surface);">
+  <div class="section-header reveal">
+    <p class="section-label">Akademik</p>
+    <h2 class="section-title">Jadwal Pelajaran</h2>
+    <p class="section-desc">Jadwal mata pelajaran per hari untuk XIENITY Generation 24.</p>
+  </div>
+
+  <!-- Day Tabs -->
+  <div class="schedule-tabs reveal">
+    <button class="tab-btn active" data-tab="senin">Senin</button>
+    <button class="tab-btn" data-tab="selasa">Selasa</button>
+    <button class="tab-btn" data-tab="rabu">Rabu</button>
+    <button class="tab-btn" data-tab="kamis">Kamis</button>
+    <button class="tab-btn" data-tab="jumat">Jumat</button>
+  </div>
+
+  <!-- Monday -->
+  <div id="tab-senin" class="schedule-panel active">
+    <div class="schedule-list">
+      <div class="schedule-item"><div class="schedule-num">1</div><span class="schedule-time">07.00 – 07.45</span><span class="schedule-subject">Matematika</span></div>
+      <div class="schedule-item"><div class="schedule-num">2</div><span class="schedule-time">07.45 – 08.30</span><span class="schedule-subject">Matematika</span></div>
+      <div class="schedule-item"><div class="schedule-num">3</div><span class="schedule-time">08.30 – 09.15</span><span class="schedule-subject">Bahasa Indonesia</span></div>
+      <div class="schedule-item"><div class="schedule-num">4</div><span class="schedule-time">09.15 – 10.00</span><span class="schedule-subject">Bahasa Indonesia</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">10.00 – 10.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat</span></div>
+      <div class="schedule-item"><div class="schedule-num">5</div><span class="schedule-time">10.15 – 11.00</span><span class="schedule-subject">Fisika</span></div>
+      <div class="schedule-item"><div class="schedule-num">6</div><span class="schedule-time">11.00 – 11.45</span><span class="schedule-subject">Fisika</span></div>
+      <div class="schedule-item"><div class="schedule-num">7</div><span class="schedule-time">11.45 – 12.30</span><span class="schedule-subject">Kimia</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">12.30 – 13.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat Siang</span></div>
+      <div class="schedule-item"><div class="schedule-num">8</div><span class="schedule-time">13.15 – 14.00</span><span class="schedule-subject">Seni Budaya</span></div>
+    </div>
+  </div>
+
+  <!-- Tuesday -->
+  <div id="tab-selasa" class="schedule-panel">
+    <div class="schedule-list">
+      <div class="schedule-item"><div class="schedule-num">1</div><span class="schedule-time">07.00 – 07.45</span><span class="schedule-subject">Biologi</span></div>
+      <div class="schedule-item"><div class="schedule-num">2</div><span class="schedule-time">07.45 – 08.30</span><span class="schedule-subject">Biologi</span></div>
+      <div class="schedule-item"><div class="schedule-num">3</div><span class="schedule-time">08.30 – 09.15</span><span class="schedule-subject">Kimia</span></div>
+      <div class="schedule-item"><div class="schedule-num">4</div><span class="schedule-time">09.15 – 10.00</span><span class="schedule-subject">Kimia</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">10.00 – 10.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat</span></div>
+      <div class="schedule-item"><div class="schedule-num">5</div><span class="schedule-time">10.15 – 11.00</span><span class="schedule-subject">Bahasa Inggris</span></div>
+      <div class="schedule-item"><div class="schedule-num">6</div><span class="schedule-time">11.00 – 11.45</span><span class="schedule-subject">Bahasa Inggris</span></div>
+      <div class="schedule-item"><div class="schedule-num">7</div><span class="schedule-time">11.45 – 12.30</span><span class="schedule-subject">Sejarah</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">12.30 – 13.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat Siang</span></div>
+      <div class="schedule-item"><div class="schedule-num">8</div><span class="schedule-time">13.15 – 14.00</span><span class="schedule-subject">PJOK</span></div>
+    </div>
+  </div>
+
+  <!-- Wednesday -->
+  <div id="tab-rabu" class="schedule-panel">
+    <div class="schedule-list">
+      <div class="schedule-item"><div class="schedule-num">1</div><span class="schedule-time">07.00 – 07.45</span><span class="schedule-subject">Pendidikan Agama</span></div>
+      <div class="schedule-item"><div class="schedule-num">2</div><span class="schedule-time">07.45 – 08.30</span><span class="schedule-subject">Pendidikan Agama</span></div>
+      <div class="schedule-item"><div class="schedule-num">3</div><span class="schedule-time">08.30 – 09.15</span><span class="schedule-subject">PKN</span></div>
+      <div class="schedule-item"><div class="schedule-num">4</div><span class="schedule-time">09.15 – 10.00</span><span class="schedule-subject">Matematika</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">10.00 – 10.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat</span></div>
+      <div class="schedule-item"><div class="schedule-num">5</div><span class="schedule-time">10.15 – 11.00</span><span class="schedule-subject">Fisika</span></div>
+      <div class="schedule-item"><div class="schedule-num">6</div><span class="schedule-time">11.00 – 11.45</span><span class="schedule-subject">Geografi</span></div>
+      <div class="schedule-item"><div class="schedule-num">7</div><span class="schedule-time">11.45 – 12.30</span><span class="schedule-subject">Geografi</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">12.30 – 13.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat Siang</span></div>
+      <div class="schedule-item"><div class="schedule-num">8</div><span class="schedule-time">13.15 – 14.00</span><span class="schedule-subject">Ekonomi</span></div>
+    </div>
+  </div>
+
+  <!-- Thursday -->
+  <div id="tab-kamis" class="schedule-panel">
+    <div class="schedule-list">
+      <div class="schedule-item"><div class="schedule-num">1</div><span class="schedule-time">07.00 – 07.45</span><span class="schedule-subject">Ekonomi</span></div>
+      <div class="schedule-item"><div class="schedule-num">2</div><span class="schedule-time">07.45 – 08.30</span><span class="schedule-subject">Sosiologi</span></div>
+      <div class="schedule-item"><div class="schedule-num">3</div><span class="schedule-time">08.30 – 09.15</span><span class="schedule-subject">Sosiologi</span></div>
+      <div class="schedule-item"><div class="schedule-num">4</div><span class="schedule-time">09.15 – 10.00</span><span class="schedule-subject">Bahasa Indonesia</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">10.00 – 10.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat</span></div>
+      <div class="schedule-item"><div class="schedule-num">5</div><span class="schedule-time">10.15 – 11.00</span><span class="schedule-subject">Informatika</span></div>
+      <div class="schedule-item"><div class="schedule-num">6</div><span class="schedule-time">11.00 – 11.45</span><span class="schedule-subject">Informatika</span></div>
+      <div class="schedule-item"><div class="schedule-num">7</div><span class="schedule-time">11.45 – 12.30</span><span class="schedule-subject">Sejarah</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">12.30 – 13.15</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat Siang</span></div>
+      <div class="schedule-item"><div class="schedule-num">8</div><span class="schedule-time">13.15 – 14.00</span><span class="schedule-subject">BK / Konseling</span></div>
+    </div>
+  </div>
+
+  <!-- Friday -->
+  <div id="tab-jumat" class="schedule-panel">
+    <div class="schedule-list">
+      <div class="schedule-item"><div class="schedule-num">1</div><span class="schedule-time">07.00 – 07.45</span><span class="schedule-subject">Bahasa Inggris</span></div>
+      <div class="schedule-item"><div class="schedule-num">2</div><span class="schedule-time">07.45 – 08.30</span><span class="schedule-subject">Bahasa Inggris</span></div>
+      <div class="schedule-item"><div class="schedule-num">3</div><span class="schedule-time">08.30 – 09.15</span><span class="schedule-subject">Seni Budaya</span></div>
+      <div class="schedule-item"><div class="schedule-num">4</div><span class="schedule-time">09.15 – 10.00</span><span class="schedule-subject">PKN</span></div>
+      <div class="schedule-item"><div class="schedule-num">—</div><span class="schedule-time">10.00 – 10.30</span><span class="schedule-subject" style="color:var(--clr-text-dim)">Istirahat (Jum'at)</span></div>
+      <div class="schedule-item"><div class="schedule-num">5</div><span class="schedule-time">10.30 – 11.15</span><span class="schedule-subject">Prakarya</span></div>
+      <div class="schedule-item"><div class="schedule-num">6</div><span class="schedule-time">11.15 – 12.00</span><span class="schedule-subject">Prakarya</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     PIKET KEBERSIHAN
+══════════════════════════════════════════ -->
+<section id="piket" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Kebersihan Kelas</p>
+    <h2 class="section-title">Jadwal Piket</h2>
+    <p class="section-desc">Pembagian tugas kebersihan kelas per hari.</p>
+  </div>
+
+  <div class="piket-grid reveal">
+    <div class="piket-card glass-card">
+      <p class="piket-day">Senin</p>
+      <div class="piket-names">
+        <span class="piket-name">Andi Pratama</span>
+        <span class="piket-name">Bunga Aulia</span>
+        <span class="piket-name">Cahyo Nur</span>
+        <span class="piket-name">Dina Ayu</span>
+        <span class="piket-name">Erlan Putra</span>
+        <span class="piket-name">Farah Nida</span>
+        <span class="piket-name">Gilang Maulana</span>
+      </div>
+    </div>
+    <div class="piket-card glass-card">
+      <p class="piket-day">Selasa</p>
+      <div class="piket-names">
+        <span class="piket-name">Hana Sari</span>
+        <span class="piket-name">Irfan Rizky</span>
+        <span class="piket-name">Jasmine Putri</span>
+        <span class="piket-name">Kevin Arya</span>
+        <span class="piket-name">Laila Indah</span>
+        <span class="piket-name">Maulana Akbar</span>
+        <span class="piket-name">Nadia Kusuma</span>
+      </div>
+    </div>
+    <div class="piket-card glass-card">
+      <p class="piket-day">Rabu</p>
+      <div class="piket-names">
+        <span class="piket-name">Omar Hakim</span>
+        <span class="piket-name">Prita Dewi</span>
+        <span class="piket-name">Qori Amelia</span>
+        <span class="piket-name">Raka Setiawan</span>
+        <span class="piket-name">Sinta Maharani</span>
+        <span class="piket-name">Tirta Bayu</span>
+        <span class="piket-name">Ulfa Rahayu</span>
+      </div>
+    </div>
+    <div class="piket-card glass-card">
+      <p class="piket-day">Kamis</p>
+      <div class="piket-names">
+        <span class="piket-name">Vina Amira</span>
+        <span class="piket-name">Wahyu Saputra</span>
+        <span class="piket-name">Xena Aurel</span>
+        <span class="piket-name">Yogi Pramana</span>
+        <span class="piket-name">Zahra Fauziah</span>
+        <span class="piket-name">Aldo Santoso</span>
+        <span class="piket-name">Bella Natasha</span>
+      </div>
+    </div>
+    <div class="piket-card glass-card">
+      <p class="piket-day">Jumat</p>
+      <div class="piket-names">
+        <span class="piket-name">Candra Wibowo</span>
+        <span class="piket-name">Dara Anisa</span>
+        <span class="piket-name">Eko Purnomo</span>
+        <span class="piket-name">Fina Lestari</span>
+        <span class="piket-name">Gita Permata</span>
+        <span class="piket-name">Hafiz Ardianto</span>
+        <span class="piket-name">Indra Cahya</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     KAS KELAS
+══════════════════════════════════════════ -->
+<section id="kas" class="section" style="background: var(--clr-surface);">
+  <div class="section-header reveal">
+    <p class="section-label">Keuangan</p>
+    <h2 class="section-title">Kas Kelas</h2>
+    <p class="section-desc">Laporan keuangan kelas XIENITY Generation 24.</p>
+  </div>
+
+  <div class="kas-dashboard">
+    <!-- Total -->
+    <div class="kas-total reveal">
+      <p class="kas-label">Total Kas Terkumpul</p>
+      <p class="kas-amount">Rp 2.450.000</p>
+      <p class="kas-sub">Per bulan ini · diperbarui secara berkala</p>
+
+      <div class="progress-bar" style="margin-top: 28px;">
+        <div class="progress-label">
+          <span>Target Bulanan</span>
+          <span>Rp 3.600.000</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" data-target="68"></div>
+        </div>
+        <div class="progress-label" style="margin-top: 8px;">
+          <span style="color: var(--clr-purple-light);">68% tercapai</span>
+          <span>Rp 1.150.000 lagi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="kas-row">
+      <div class="kas-stat glass-card reveal">
+        <p class="kas-stat-label">Sudah Bayar</p>
+        <p class="kas-stat-value">27 Siswa</p>
+        <p class="kas-stat-note" style="color: #4caf81;">Tepat waktu ✓</p>
+      </div>
+      <div class="kas-stat glass-card reveal">
+        <p class="kas-stat-label">Tunggakan</p>
+        <p class="kas-stat-value">8 Siswa</p>
+        <p class="kas-stat-note" style="color: #e07070;">Belum melunasi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     SPOTIFY PLAYLIST
+══════════════════════════════════════════ -->
+<section id="spotify" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Musik Kelas</p>
+    <h2 class="section-title">Playlist XIENITY</h2>
+  </div>
+
+  <div class="spotify-card glass-card reveal" style="text-align:center; padding: 48px 40px;">
+    <div class="spotify-icon">
+      <i class="fa-brands fa-spotify"></i>
+    </div>
+    <h3 class="spotify-title">XIENITY Vibes 🎵</h3>
+    <p class="spotify-desc">Koleksi lagu favorit kelas — dari chill lo-fi sampai hype banget.<br>Update tiap minggu.</p>
+    <a href="https://open.spotify.com" target="_blank" rel="noopener" class="btn btn-spotify" style="margin: 0 auto; width: fit-content;">
+      <i class="fa-brands fa-spotify"></i>
+      Open Playlist
+    </a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     GALERI KELAS
+══════════════════════════════════════════ -->
+<section id="galeri" class="section" style="background: var(--clr-surface);">
+  <div class="section-header reveal">
+    <p class="section-label">Momen Kelas</p>
+    <h2 class="section-title">Galeri</h2>
+    <p class="section-desc">Kenangan indah bersama XIENITY Generation 24. Klik foto untuk lihat lebih besar.</p>
+  </div>
+
+  <div class="gallery-grid reveal">
+    <!-- 6 gallery items with placeholder images (gradient-based) -->
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity1/600/450" alt="Foto kelas 1 — Momen bersama" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Momen Bersama</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity2/600/450" alt="Foto kelas 2 — Outing class" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Outing Class</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity3/600/450" alt="Foto kelas 3 — Upacara bendera" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Upacara Bendera</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity4/600/450" alt="Foto kelas 4 — Study group" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Study Group</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity5/600/450" alt="Foto kelas 5 — Perayaan ulang tahun" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Ultah Kelas</span>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://picsum.photos/seed/xienity6/600/450" alt="Foto kelas 6 — Pensi sekolah" loading="lazy" />
+      <div class="gallery-overlay">
+        <span class="gallery-overlay-text"><i class="fa-regular fa-image"></i> &nbsp;Pensi Sekolah</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-nav lightbox-prev" id="lb-prev" aria-label="Previous photo">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <img class="lightbox-img" id="lb-img" src="" alt="" />
+  <button class="lightbox-nav lightbox-next" id="lb-next" aria-label="Next photo">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+  <button class="lightbox-close" id="lb-close" aria-label="Close">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     ANGGOTA KELAS
+══════════════════════════════════════════ -->
+<section id="member" class="section">
+  <div class="section-header reveal">
+    <p class="section-label">Keluarga XIENITY</p>
+    <h2 class="section-title">Member Kelas</h2>
+    <p class="section-desc">35 jiwa yang membentuk XIENITY Generation 24.</p>
+  </div>
+
+  <div class="members-grid">
+    <!-- 35 members, alphabetical order -->
+    <div class="member-card"><div class="member-avatar">A</div><p class="member-name">Aldi Firmansyah</p><p class="member-num">No. 01</p></div>
+    <div class="member-card"><div class="member-avatar">A</div><p class="member-name">Alea Nazhifah</p><p class="member-num">No. 02</p></div>
+    <div class="member-card"><div class="member-avatar">A</div><p class="member-name">Andi Kurniawan</p><p class="member-num">No. 03</p></div>
+    <div class="member-card"><div class="member-avatar">A</div><p class="member-name">Anisa Ramadhani</p><p class="member-num">No. 04</p></div>
+    <div class="member-card"><div class="member-avatar">A</div><p class="member-name">Arya Putra S.</p><p class="member-num">No. 05</p></div>
+    <div class="member-card"><div class="member-avatar">B</div><p class="member-name">Bella Anggraini</p><p class="member-num">No. 06</p></div>
+    <div class="member-card"><div class="member-avatar">B</div><p class="member-name">Bunga Lestari</p><p class="member-num">No. 07</p></div>
+    <div class="member-card"><div class="member-avatar">C</div><p class="member-name">Cahyo Prasetyo</p><p class="member-num">No. 08</p></div>
+    <div class="member-card"><div class="member-avatar">D</div><p class="member-name">Dara Puspita</p><p class="member-num">No. 09</p></div>
+    <div class="member-card"><div class="member-avatar">D</div><p class="member-name">Dimas Hidayat</p><p class="member-num">No. 10</p></div>
+    <div class="member-card"><div class="member-avatar">E</div><p class="member-name">Eka Wahyuni</p><p class="member-num">No. 11</p></div>
+    <div class="member-card"><div class="member-avatar">E</div><p class="member-name">Erlan Maulana</p><p class="member-num">No. 12</p></div>
+    <div class="member-card"><div class="member-avatar">F</div><p class="member-name">Farah Aulia</p><p class="member-num">No. 13</p></div>
+    <div class="member-card"><div class="member-avatar">F</div><p class="member-name">Fikri Ramadhan</p><p class="member-num">No. 14</p></div>
+    <div class="member-card"><div class="member-avatar">G</div><p class="member-name">Gilang Permana</p><p class="member-num">No. 15</p></div>
+    <div class="member-card"><div class="member-avatar">H</div><p class="member-name">Hana Febriani</p><p class="member-num">No. 16</p></div>
+    <div class="member-card"><div class="member-avatar">I</div><p class="member-name">Indira Salsabila</p><p class="member-num">No. 17</p></div>
+    <div class="member-card"><div class="member-avatar">I</div><p class="member-name">Irfan Hakim</p><p class="member-num">No. 18</p></div>
+    <div class="member-card"><div class="member-avatar">I</div><p class="member-name">Ivana Clarissa</p><p class="member-num">No. 19</p></div>
+    <div class="member-card"><div class="member-avatar">J</div><p class="member-name">Jasmine Nabila</p><p class="member-num">No. 20</p></div>
+    <div class="member-card"><div class="member-avatar">K</div><p class="member-name">Kevin Sebastian</p><p class="member-num">No. 21</p></div>
+    <div class="member-card"><div class="member-avatar">L</div><p class="member-name">Laila Nur A.</p><p class="member-num">No. 22</p></div>
+    <div class="member-card"><div class="member-avatar">M</div><p class="member-name">Maulana Yusuf</p><p class="member-num">No. 23</p></div>
+    <div class="member-card"><div class="member-avatar">N</div><p class="member-name">Nadia Putri</p><p class="member-num">No. 24</p></div>
+    <div class="member-card"><div class="member-avatar">O</div><p class="member-name">Omar Farouq</p><p class="member-num">No. 25</p></div>
+    <div class="member-card"><div class="member-avatar">P</div><p class="member-name">Prita Maharani</p><p class="member-num">No. 26</p></div>
+    <div class="member-card"><div class="member-avatar">R</div><p class="member-name">Raffi Ahmad P.</p><p class="member-num">No. 27</p></div>
+    <div class="member-card"><div class="member-avatar">R</div><p class="member-name">Raka Ardianto</p><p class="member-num">No. 28</p></div>
+    <div class="member-card"><div class="member-avatar">S</div><p class="member-name">Sinta Dewi</p><p class="member-num">No. 29</p></div>
+    <div class="member-card"><div class="member-avatar">T</div><p class="member-name">Tirta Nugraha</p><p class="member-num">No. 30</p></div>
+    <div class="member-card"><div class="member-avatar">U</div><p class="member-name">Ulfa Khoirunisa</p><p class="member-num">No. 31</p></div>
+    <div class="member-card"><div class="member-avatar">V</div><p class="member-name">Vina Azzahra</p><p class="member-num">No. 32</p></div>
+    <div class="member-card"><div class="member-avatar">W</div><p class="member-name">Wahyu Santoso</p><p class="member-num">No. 33</p></div>
+    <div class="member-card"><div class="member-avatar">Y</div><p class="member-name">Yogi Pratama</p><p class="member-num">No. 34</p></div>
+    <div class="member-card"><div class="member-avatar">Z</div><p class="member-name">Zahra Fauziah R.</p><p class="member-num">No. 35</p></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     GURU / TEACHERS
+══════════════════════════════════════════ -->
+<section id="guru" class="section" style="background: var(--clr-surface);">
+  <div class="section-header reveal">
+    <p class="section-label">Pengajar</p>
+    <h2 class="section-title">Daftar Guru</h2>
+    <p class="section-desc">Tenaga pengajar yang membimbing XIENITY Generation 24.</p>
+  </div>
+
+  <div class="teachers-grid">
+    <div class="teacher-card glass-card"><div class="teacher-avatar">MP</div><p class="teacher-name">Muh. Purnomo, S.Pd.</p><p class="teacher-subject">Matematika</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">SR</div><p class="teacher-name">Siti Rahayu, S.Pd.</p><p class="teacher-subject">Bahasa Indonesia</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">AH</div><p class="teacher-name">Ahmad Hasim, M.Pd.</p><p class="teacher-subject">Fisika</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">DW</div><p class="teacher-name">Dewi Wulandari, S.Si.</p><p class="teacher-subject">Kimia</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">BS</div><p class="teacher-name">Budi Setiawan, S.Pd.</p><p class="teacher-subject">Biologi</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">NK</div><p class="teacher-name">Nura Kusuma, S.S.</p><p class="teacher-subject">Bahasa Inggris</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">RP</div><p class="teacher-name">Rudi Prayoga, S.Pd.</p><p class="teacher-subject">Sejarah</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">IW</div><p class="teacher-name">Ika Widyastuti, S.Pd.</p><p class="teacher-subject">Geografi</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">FN</div><p class="teacher-name">Farhan Naufal, S.Pd.</p><p class="teacher-subject">Ekonomi</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">MS</div><p class="teacher-name">Maya Susanti, S.Sos.</p><p class="teacher-subject">Sosiologi</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">HA</div><p class="teacher-name">Hendra Arif, S.Pd.</p><p class="teacher-subject">PJOK</p></div>
+    <div class="teacher-card glass-card"><div class="teacher-avatar">LA</div><p class="teacher-name">Lina Amalia, S.Ag.</p><p class="teacher-subject">Pendidikan Agama</p></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ftLogoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#3d1a6e"/>
+              <stop offset="100%" stop-color="#8b5cc8"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="14" fill="url(#ftLogoGrad)"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                font-family="Georgia, serif" font-size="30" fill="white" font-weight="300">X</text>
+        </svg>
+        XIENITY
+      </div>
+
+      <!-- Socials -->
+      <div class="footer-socials">
+        <a href="https://instagram.com/xienity" target="_blank" rel="noopener"
+           class="footer-social" aria-label="Instagram @xienity">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@xienity" target="_blank" rel="noopener"
+           class="footer-social" aria-label="TikTok @xienity">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener"
+           class="footer-social" aria-label="Spotify Playlist">
+          <i class="fa-brands fa-spotify"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="footer-bottom">
+      <span>© 2026 XIENITY Generation 24</span>
+      <span style="color: var(--clr-purple-light);">Made with ♥ by XIENITY</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Scripts ── -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script src="js/script.js"></script>
+
+</body>
+</html>
